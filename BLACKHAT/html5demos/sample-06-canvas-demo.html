@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <title>HTML5 Canvas Demo</title>
+    <link rel="stylesheet" href="html5reset.css" type="text/css" />
+    <link rel="stylesheet" href="html5simple.css" type="text/css" />
+    <!--[if lt IE 9]>
+        <script src="html5.js"></script>
+        <script src="excanvas.js"></script>
+    <![endif]-->
+        <script type="text/javascript">
+        function draw(){
+            var canvas = document.getElementById('mycanvas');
+            if (canvas.getContext){
+                var ctx = canvas.getContext('2d');
+
+                // Draw Rectangle
+                ctx.fillStyle = "rgb(255,0,0)";
+                ctx.fillRect (10, 10, 100, 100);
+
+                // Draw Circle
+                ctx.fillStyle = "rgb(0,255,0)";
+                ctx.beginPath();
+                ctx.arc(125,100,50,0,Math.PI*2,true);
+                ctx.fill();
+                ctx.closePath();
+
+                // Draw Custom Shape With Lines
+                ctx.fillStyle = "rgb(0,0,255)";
+                ctx.beginPath();
+                ctx.moveTo(125,100);
+                ctx.lineTo(175,50);
+                ctx.lineTo(225,150);
+                ctx.fill();
+                ctx.closePath();
+
+                // Draw Image From External File
+                var myImage = new Image();
+                myImage.onload = function(){
+                    ctx.drawImage(myImage, 220, 10);
+                }
+                myImage.src = "sample.jpg";
+
+
+            }
+        }
+        </script>
+        <style type="text/css">
+            canvas {
+                border: 5px solid #ccc;
+                background: #000;
+            }
+        </style>
+</head>
+<body onload="draw();">
+    <header>
+        <h1>HTML5 Canvas Demo</h1>
+    </header>
+
+    <figure>
+        <canvas id="mycanvas" width="300" height="200">Fallback content, in case the browser does not support Canvas.</canvas>
+        <figcaption>Works in Firefox 3+, Safari 3.1+, Chrome 2+ and Opera 9.6+)<br />Uses <a href="http://code.google.com/p/explorercanvas/" target="_blank">ExplorerCanvas</a> for Internet Explorer</figcaption>
+    </figure>
+
+
+
+
+
+</body>
+</html>

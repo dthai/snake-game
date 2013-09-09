@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <title>HTML5 Drag & Drop Demo</title>
+    <link rel="stylesheet" href="html5reset.css" type="text/css" />
+    <link rel="stylesheet" href="html5simple.css" type="text/css" />
+    <!--[if lt IE 9]>
+        <script src="html5.js"></script>
+    <![endif]-->
+
+    <script>
+    function DragHandler(target, e) {
+        e.dataTransfer.setData('Text', target.id);
+    }
+
+    function DropHandler(target, e) {
+       var id = e.dataTransfer.getData('Text');
+       target.appendChild(document.getElementById(id));
+       e.preventDefault();
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>HTML5 Drag & Drop Demo</h1>
+    </header>
+<div id="dndcontainer">
+    <div ondrop="DropHandler(this, event)" ondragenter="return false" ondragover="return false" class="dndbox">
+        <img src="item-1.png" id="club" ondragstart="DragHandler(this, event)" width="75" height="75" border="0" alt="" />
+        <img src="item-2.png" id="heart" ondragstart="DragHandler(this, event)" width="75" height="75" border="0" alt="" />
+        <img src="item-3.png" id="spade" ondragstart="DragHandler(this, event)" width="75" height="75" border="0" alt="" />
+        <img src="item-4.png" id="diamond" ondragstart="DragHandler(this, event)" width="75" height="75" border="0" alt="" />
+    </div>
+
+    <div ondrop="DropHandler(this, event)" ondragenter="return false" ondragover="return false" class="dndbox"></div>
+
+    <div id="demonotes">Drag and drop images from one container to another. Works in all major browsers except Opera.</div>
+
+</div>
+
+
+
+</body>
+</html>

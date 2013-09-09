@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <title>HTML5 Video With Custom Controls Demo</title>
+    <link rel="stylesheet" href="html5reset.css" type="text/css" />
+    <link rel="stylesheet" href="html5simple.css" type="text/css" />
+    <!--[if lt IE 9]>
+        <script src="html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <h1>Video With Custom Controls</h1>
+    </header>
+
+    <div id="democontainer">
+        <video width="320" height="240" preload="none" poster="videoframe.jpg">
+            <source src="demo-video.mp4" type="video/mp4" />
+            <source src="demo-video.ogv" type="video/ogg" />
+        </video>
+
+        <script>
+            var video = document.getElementsByTagName('video')[0];
+            function toggleMute() {
+                video.muted = !video.muted;
+            }
+        </script>
+        <p>
+            <a href="JavaScript:video.play();">Play</a> |
+            <a href="JavaScript:video.pause();">Pause</a> |
+            <a href="JavaScript:toggleMute();">Sound On/Off</a>
+        </p>
+
+        <div id="demonotes">
+            Uses DOM API for video to create custom controls<br />(Works in Chrome 4+, Firefox 3.6+, Opera 10.5+ and Safari4+)<br />
+            <small>Video From: <a href="http://www.bigbuckbunny.org/">www.bigbuckbunny.org</a></small>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+</html>

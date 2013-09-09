@@ -1,0 +1,42 @@
+<html>
+	<head>		
+		<script src="/js/chat_ui.js" ></script>
+		<script type="text/javascript">
+			var ws = new WebSocket("ws://localhost:3000/");     
+			var userId = 0;   			
+
+			ws.onopen = function() {
+				 document.getElementById('messages').innerHTML += "Connection established" + '\n';
+			};
+
+			ws.onmessage = function(message) {
+				handleMessage(message);
+			}
+			ws.onclose = function() {
+				 document.getElementById('messages').innerHTML += "Connection closed" + '\n';
+			};								
+		</script>
+
+	</head>
+	<body>
+	<div>
+		<textarea id="messages" cols="50" rows="20">
+		</textarea>
+	</div>
+	<div>
+		<input type="text" id="msgId" name="msg"><br>
+		<button type="button" onclick="sendMessage();">Send</button>
+	</div>
+	<canvas id="canvas" width="578" height="400"></canvas> 
+	<script type="text/javascript">
+		// var canvas = document.getElementById('canvas');
+		// var context = canvas.getContext('2d');
+		// var imageObj = new Image();
+
+		// imageObj.onload = function() {
+		//   context.drawImage(imageObj, 69, 50);
+		// };
+		// imageObj.src = 'http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg';
+	</script>
+	</body>
+</html> 

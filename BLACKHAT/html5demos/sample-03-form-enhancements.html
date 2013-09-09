@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <title>HTML5 Form Enhancements</title>
+    <link rel="stylesheet" href="html5reset.css" type="text/css" />
+    <link rel="stylesheet" href="html5forms.css" type="text/css" />
+    <!--[if lt IE 9]>
+        <script src="html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <h1>HTML5 Form Demo</h1>
+    </header>
+<form>
+    <fieldset>
+        <legend>New Attributes</legend>
+        <p>
+            <label>Required:</label>
+            <input type="text" name="html5requied" required="true">
+            <small>Works in Opera & Chrome</small>
+        </p>
+        <p>
+            <label>AutoFocus:</label>
+            <input type="text" name="html5autofocus" autofocus="true">
+            <small>Works in Opera, Chrome & Safari</small>
+        </p>
+        <p>
+            <label>PlaceHolder:</label>
+            <input type="text" name="html5placeholder" placeholder="This Will Show in WebKit">
+            <small>Works in Chrome & Safari</small>
+        </p>
+        <p>
+            <label>Input Pattern:</label>
+            <input type="text" pattern="[0-9][A-Z]{3}" name="html5pattern" required title="Enter a digit followed by three uppercase letters"/>
+            <small>Works in Opera & Chrome</small>
+        </p>
+        <p>
+            <label>Multiple Files:</label>
+            <input type="file" name="html5multiplefileupload" multiple>
+            <small>Works in Chrome, Safari & Firefox</small>
+        </p>
+        <p>
+            <label>List:</label>
+            <input type="text" name="html5textwithdatalist" list="colors">
+            <datalist id="colors">
+                <option value="Red">
+                <option value="Green">
+                <option value="Blue">
+            </datalist>
+            <small>Works in Opera</small>
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>New Input Types</legend>
+        <p>
+            <label>Email:</label>
+            <input type="email" name="html5email">
+            <small>Works in Opera</small>
+        </p>
+        <p>
+            <label>URL:</label>
+            <input type="url" name="html5url">
+            <small>Works in Opera</small>
+        </p>
+        <p>
+            <label>Number:</label>
+            <input type="number" name="html5number" min="1" max="10" step="1" value="1">
+            <small>Works in Opera</small>
+        </p>
+        <p>
+            <label>Range:</label>
+            <input type="range" name="html5range" min="-100" max="100" value="0" step="10">
+            <small>Works in Opera, Chrome & Safari</small>
+        </p>
+        <p>
+            <label>Time:</label>
+            <input type="time" step="900" name="html5time">
+            <small>Works in Opera</small>
+        </p>
+        <p>
+            <label>Date:</label>
+            <input type="date" name="html5date">
+            <small>Works in Opera</small>
+        </p>
+        <p>
+            <label>Month:</label>
+            <input type="month" name="html5month">
+            <small>Works in Opera</small>
+        </p>
+        <p>
+            <label>Week:</label>
+            <input type="week" name="html5week">
+            <small>Works in Opera</small>
+        </p>
+        <p>
+            <label>DateTime:</label>
+            <input type="datetime" name="html5datetime">
+            <small>Works in Opera</small>
+        </p>
+    </fieldset>
+
+    <div><button>Submit</button></div>
+</form>
+
+
+
+
+
+</body>
+</html>

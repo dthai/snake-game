@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <title>OpenLayers Geolocation</title>
+
+        <link rel="stylesheet" href="./css/style.css" type="text/css">
+        <link rel="stylesheet" href="./css/style(1).css" type="text/css">
+        <style>
+            .olControlAttribution {
+                bottom: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="title">Geolocation Example</h1>
+
+        <div id="tags">
+            geolocation, geolocate, mobile
+        </div>
+
+        <p id="shortdesc">
+            Track  current position and display it with its accuracy.
+        </p>
+
+        <div id="map" class="smallmap olMap"><div id="OpenLayers_Map_2_OpenLayers_ViewPort"  class="olMapViewport olControlDragPanActive olControlZoomBoxActive olControlPinchZoomActive olControlNavigationActive olControlGeolocateActive" style="position: relative; overflow: hidden; width: 100%; height: 100%; margin-top: -256px;"><div id="OpenLayers_Map_2_OpenLayers_Container" style="position: absolute; z-index: 749; left: 0px; top: 0px;"><div id="OpenLayers_Layer_OSM_18" dir="ltr" class="olLayerDiv olLayerGrid" style="position: absolute; width: 100%; height: 100%; z-index: 100;"><img class="olTileImage" crossorigin="anonymous" src="./OpenLayers Geolocation_files/962.png" style="visibility: inherit; opacity: 1; position: absolute; left: 101px; top: 113px; width: 256px; height: 256px;"><img class="olTileImage" crossorigin="anonymous" src="./OpenLayers Geolocation_files/961.png" style="visibility: inherit; opacity: 1; position: absolute; left: 101px; top: -143px; width: 256px; height: 256px;"><img class="olTileImage" crossorigin="anonymous" src="./OpenLayers Geolocation_files/962(1).png" style="visibility: inherit; opacity: 1; position: absolute; left: 357px; top: 113px; width: 256px; height: 256px;"><img class="olTileImage" crossorigin="anonymous" src="./OpenLayers Geolocation_files/961(1).png" style="visibility: inherit; opacity: 1; position: absolute; left: 357px; top: -143px; width: 256px; height: 256px;"><img class="olTileImage" crossorigin="anonymous" src="./OpenLayers Geolocation_files/962(2).png" style="visibility: inherit; opacity: 1; position: absolute; left: -155px; top: 113px; width: 256px; height: 256px;"><img class="olTileImage" crossorigin="anonymous" src="./OpenLayers Geolocation_files/961(2).png" style="visibility: inherit; opacity: 1; position: absolute; left: -155px; top: -143px; width: 256px; height: 256px;"></div><div id="OpenLayers_Layer_Vector_20" dir="ltr" class="olLayerDiv" style="position: absolute; width: 100%; height: 100%; z-index: 330; left: 0px; top: 0px;"><svg id="OpenLayers_Layer_Vector_20_svgRoot" width="512" height="256" viewBox="0 0 512 256" style="display: block;"><g id="OpenLayers_Layer_Vector_20_root" transform="" style="visibility: visible;"><g id="OpenLayers_Layer_Vector_20_vroot"><svg id="OpenLayers_Geometry_Point_45" cx="255.99999999036663" cy="127.99999999914871" r="1" viewBox="-10 -10 30 30" width="60" height="60" x="225.99999999036663" y="97.99999999914871" fill="#000000" fill-opacity="0" stroke="#f00" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="4 , 0 6 , 0 6 , 4 10 , 4 10 , 6 6 , 6 6 , 10 4 , 10 4 , 6 0 , 6 0 , 4 4 , 4 4 , 0"></polygon></svg><path id="OpenLayers_Geometry_Polygon_88" d=" M 264.62972891543177,237.6511025386626 281.6766941989772,234.95112848300232 298.09141405505943,229.61766269361215 313.4697036034777,221.78203279900117 327.43289831790025,211.6371780121408 339.63717800332233,199.43289832671508 349.78203279024456,185.46970361225976 357.61766268478823,170.09141406384515 362.95112847420387,153.67669420775928 365.6511025298678,136.6297289242102 365.6511025298678,119.37027107408903 362.95112847420387,102.32330579052905 357.61766268478823,85.908585934445 349.78203279024456,70.53029638602857 339.63717800332233,56.56710167158235 327.43289831790025,44.36282198615663 313.4697036034777,34.217967199294435 298.09141405505943,26.382337304678003 281.6766941989772,21.048871515296923 264.62972891543177,18.348897459620275 247.3702710652724,18.348897459620275 230.32330578175606,21.048871515296923 213.90858592567383,26.382337304678003 198.53029637722648,34.217967199294435 184.5671016628039,44.36282198615663 172.36282197741093,56.56710167158053 162.2179671904887,70.53029638602857 154.38233729591593,85.908585934445 149.0488715065294,102.32330579052905 146.34889745086548,119.37027107408903 146.34889745086548,136.6297289242102 149.0488715065294,153.67669420775928 154.38233729591593,170.09141406384515 162.2179671904887,185.46970361225976 172.36282197741093,199.43289832671508 184.5671016628039,211.6371780121408 198.53029637722648,221.78203279900117 213.90858592567383,229.61766269361215 230.32330578175606,234.95112848300232 247.3702710652724,237.6511025386626 264.62972891543177,237.6511025386626 z" fill-rule="evenodd" fill="#000" fill-opacity="0.1" stroke="none"></path></g><g id="OpenLayers_Layer_Vector_20_troot"></g></g><defs id="OpenLayers_Layer_Vector_20_defs"><symbol id="OpenLayers_Layer_Vector_20-cross" viewBox="-10 -10 30 30"><polygon points="4 , 0 6 , 0 6 , 4 10 , 4 10 , 6 6 , 6 6 , 10 4 , 10 4 , 6 0 , 6 0 , 4 4 , 4 4 , 0"></polygon></symbol></defs></svg></div></div><div id="OpenLayers_Control_Zoom_5" class="olControlZoom olControlNoSelect" unselectable="on" style="position: absolute; z-index: 1004;"><a href="http://openlayers.org/dev/examples/geolocation.html#zoomIn" class="olControlZoomIn olButton">+</a><a href="http://openlayers.org/dev/examples/geolocation.html#zoomOut" class="olControlZoomOut olButton">−</a></div><div id="OpenLayers_Control_ArgParser_6" class="olControlArgParser olControlNoSelect" unselectable="on" style="position: absolute; z-index: 1004;"></div><div id="OpenLayers_Control_Attribution_7" class="olControlAttribution olControlNoSelect" unselectable="on" style="position: absolute; z-index: 1004;">© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors</div><div id="OpenLayers_Control_Geolocate_32" class="olControlGeolocate olControlNoSelect" unselectable="on" style="position: absolute; z-index: 1005;"></div></div></div>
+        <button id="locate">Locate me!</button>
+        <input type="checkbox" name="track" id="track">
+        <label for="track">Track my position</label>
+        <div id="docs">
+            <p>
+                View the <a href="./js/geolocation.js" target="_blank">geolocation.js source</a>
+                to see how this is done.
+            </p>
+        </div>
+        <script src="./js/OpenLayers.js"></script>
+        <script src="./js/geolocation.js"></script>
+    
+
+</body></html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <title>HTML5 ContentEditable Demo</title>
+    <link rel="stylesheet" href="html5reset.css" type="text/css" />
+    <link rel="stylesheet" href="html5simple.css" type="text/css" />
+    <!--[if lt IE 9]>
+        <script src="html5.js"></script>
+    <![endif]-->
+
+    <script language="javascript">
+    function editStyle(cmd) {
+        document.execCommand(cmd, null, null);
+    }
+    </script>
+</head>
+<body onload="draw();">
+    <header>
+        <h1>HTML5 ContentEditable Demo</h1>
+    </header>
+
+    <div id="democontainer">
+        <div id="editingcontrols">
+            <a href="#" onclick="editStyle('bold');">[Bold]</a>
+            <a href="#" onclick="editStyle('italic');">[Italic]</a>
+            <a href="#" onclick="editStyle('underline');">[Underline]</a>
+        </div>
+        <div id="editor" contenteditable="true">
+            <h2>HTML5 Standardized Content Editing</h2>
+            <p>Thanks to Microsoft; HTML elements are editable since Internet Explorer 5.5....</p>
+            <p>To edit just start typing. To change style, select text and click on links in the tools bar.</p>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

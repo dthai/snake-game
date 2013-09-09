@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="js/common.js" type="text/javascript"></script>
+	<script>
+
+</script>
+<script src="/js/chat_ui.js" ></script>
+<script type="text/javascript">
+	var ws = new WebSocket("ws://192.168.73.86:3000/");     
+	var userId = 0;   			
+
+	ws.onopen = function() {
+		 document.getElementById('messages').innerHTML += "Connection established" + '\n';
+	};
+
+	ws.onmessage = function(message) {
+		handleMessage(message);
+	}
+	ws.onclose = function() {
+		 document.getElementById('messages').innerHTML += "Connection closed" + '\n';
+	};								
+	
+</script>
+<title>HTML5 Development day - SCHWYZ</title>
+</head>
+<body style="width:877px">
+<section id="main-content">
+	<article class="header group">
+		<span style="width:115px; float:left; margin-left:200px;">
+			<h1>SNAKE</h1>
+		</span>
+		<span id="secLabel" style="width:200px;float:left">
+			<ul> 
+			  <li>H</li> 
+			  <li>T</li> 
+			  <li>M</li>  
+			  <li>L</li>  
+			  <li>5</li> 
+			</ul> 
+		</span>
+	</article>
+	<article class="container group">
+		<section id="buttonGroup" class="buttonGroup group">
+			<div id="btnPlay" class="button aqua fl">	
+				<div class="glare"></div>
+				<span id="labelBtn1">PLAY</span>
+			</div>
+			<div id="btnPause" class="button aqua fl">	
+				<div class="glare"></div>
+				<span id="labelBtn3">PAUSE</span>
+			</div>
+			<div id="btnStop" class="button orange fl">	
+				<div class="glare"></div>
+				<span id="labelBtn2">STOP</span>
+			</div>
+		</section>
+		<section class="welcomePanel">
+			<p class="shine">BLACK HAT - SCHWYZ</p>
+			<div id="trailerContainer" style="margin-top:-50px;">
+				<video id="trailer" width="350" height="250" controls="true">
+					<source src="video/white_snake.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+
+				<div id="btnSkip" class="button special fl">	
+					<div class="glare"></div>
+					<span id="labelBtn4">SKIP >>></span>
+				</div>
+			</div>
+			<div id="btnStart" class="button aqua fl">	
+				<div class="glare"></div>
+				<span id="labelBtn5">START</span>
+			</div>
+		</section>
+		<section class="gamePanel">
+			<canvas id="canvas" width="350" height="350"></canvas>
+			<audio id="eatSound">
+			  <source src="audio/chomp.mp3" type="audio/mp3">
+			Your browser does not support the audio element.
+			</audio>
+			<audio id="bgSound">
+			  <source src="audio/bg-music.mp3" type="audio/mp3">
+			Your browser does not support the audio element.
+			</audio>
+		</section>
+		<section class="infoPanel">
+			<article id="scoreContainer" class="scorePanel group">
+				<section class="levelGroup">
+					<span class="txtLevel"><h2>LEVEL</h2><span>
+					<div class="levelBox stroke">
+						<span id="levelPlace">-</span>
+					</div>
+				</section>
+				<section id="targetGroup" class="targetGroup">
+					<span class="txtTarget"><h2>TARGET</h2><span>
+					<div class="targetBox stroke">
+						<span id="targetPlace">-</span>
+					</div>
+				</section>
+				<section id="scoreGroup" class="scoreGroup">
+					<span class="txtScore"><h2>SCORE</h2><span>
+					<div class="scoreBox stroke">
+						<span id="scorePlace">-</span>
+					</div>
+				</section>
+			</article>
+			<article class="chatContainer">
+				<div>
+					<textarea id="messages" cols="30" rows="11" readonly="true">
+					</textarea>
+				</div>
+				<div class="typeGroup group">
+					<input type="text" style="float:left;" id="msgId" name="msg"><br>
+					<button id="btnSend" style="float:left;" type="button" onclick="sendMessage();">Send</button>
+				</div>
+			</article>
+		</section>
+	</article>
+</section>
+	<!-- Jquery -->
+	
+</body>
+</html>

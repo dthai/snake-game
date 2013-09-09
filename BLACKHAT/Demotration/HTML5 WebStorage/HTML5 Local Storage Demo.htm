@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- saved from url=(0101)http://demos.w3avenue.com/html5-unleashed-tips-tricks-and-techniques/sample-10-localstorage-demo.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>HTML5 Local Storage Demo</title>
+    <link rel="stylesheet" href="./HTML5 Local Storage Demo_files/html5reset.css" type="text/css">
+    <link rel="stylesheet" href="./HTML5 Local Storage Demo_files/html5simple.css" type="text/css">
+    <!--[if lt IE 9]>
+        <script src="html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<script type="text/javascript" async="" src="./HTML5 Local Storage Demo_files/ga.js"></script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2496451-7']);
+  _gaq.push(['_setDomainName', '.w3avenue.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <header>
+        <h1>HTML5 Local Storage Demo</h1>
+    </header>
+
+    <div id="democontainer">
+        <p>Try reloading this page few times to increment the counter.<br>You can close your browser window or even restart your machine<br>Local Storage counter will increment from where you left it.</p>
+
+        <p>You Have Viewed This Page <b>
+        <script>
+            if (!localStorage.pageCounter)
+                localStorage.setItem('pageCounter',0);
+            localStorage.setItem('pageCounter',parseInt(localStorage.pageCounter)+1);
+            document.write(localStorage.pageCounter);
+        </script>7
+        </b> Time(s).</p>
+
+        <p><input value="Clear localStorage" type="button" onclick="localStorage.clear();location.reload(true);">
+        <input value="Reload Page" type="button" onclick="location.reload(true);"></p>
+
+
+
+        <div id="demonotes">Works in  IE8+, Firefox 3.5+, Safari 4.0+, Chrome  2.0+ &amp; Opera 10.5+.</div>
+
+    </div>
+
+
+
+
+
+</body></html>

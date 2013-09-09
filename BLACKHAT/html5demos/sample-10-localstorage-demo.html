@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <title>HTML5 Local Storage Demo</title>
+    <link rel="stylesheet" href="html5reset.css" type="text/css" />
+    <link rel="stylesheet" href="html5simple.css" type="text/css" />
+    <!--[if lt IE 9]>
+        <script src="html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <h1>HTML5 Local Storage Demo</h1>
+    </header>
+
+    <div id="democontainer">
+        <p>Try reloading this page few times to increment the counter.<br />You can close your browser window or even restart your machine<br />Local Storage counter will increment from where you left it.</p>
+
+        <p>You Have Viewed This Page <b>
+        <script>
+            if (!localStorage.pageCounter)
+                localStorage.setItem('pageCounter',0);
+            localStorage.setItem('pageCounter',parseInt(localStorage.pageCounter)+1);
+            document.write(localStorage.pageCounter);
+        </script>
+        </b> Time(s).</p>
+
+        <p><input value="Clear localStorage" type="button" onClick="localStorage.clear();location.reload(true);" />
+        <input value="Reload Page" type="button" onClick="location.reload(true);" /></p>
+
+
+
+        <div id="demonotes">Works in  IE8+, Firefox 3.5+, Safari 4.0+, Chrome  2.0+ & Opera 10.5+.</div>
+
+    </div>
+
+
+
+</body>
+</html>
